@@ -1,39 +1,33 @@
-# Analysis of Probabilistic Models in Machine Learning
+# Project: Preprocessing and Clustering Techniques
 
-This project focuses on analyzing a dataset containing 91 variables and 3,000 observations using machine learning techniques, specifically probabilistic and embedded methods. The main objective is to predict a target variable with three possible categorical values: 0, 1, or 2.
+## Overview
 
-## Methods Employed
+This project applies various preprocessing and clustering techniques to a dataset of fruit instances. The dataset includes features such as weight, length, width, and symmetry, with an additional categorical variable representing the cleft size of the fruit. The project focuses on preparing the data for clustering analysis and evaluates the performance of two clustering algorithms: Hierarchical Clustering and KMeans.
 
-The following machine learning methods were applied:
+## Preprocessing
 
-- **Naive Bayes**
-- **Augmented Naive Bayes**
-- **Discriminant Analysis** (LDA and QDA)
-- **Bagging**
-- **Random Forest**
-- **AdaBoost**
-- **Gradient Boosting**
+Several preprocessing steps are applied to the data to ensure its suitability for clustering:
 
-## Feature Selection Techniques
+- **Imputation of Missing Values**: Missing data is handled using advanced imputation techniques.
+- **Encoding of Cleft Variable**: The categorical cleft size variable is encoded numerically for analysis.
+- **Outlier Removal**: Extreme outliers are identified and treated to improve data quality.
+- **Scaling**: The variables are scaled using different techniques to standardize the data range.
 
-To improve model performance, a series of feature selection techniques were employed:
+## Clustering Techniques
 
-- **ANOVA**
-- **Mutual Information**
-- **Lasso**
+### Hierarchical Clustering
 
-## Project Objective
+Hierarchical Clustering is applied to the preprocessed data, with different linkage methods (single, average, ward, complete) and dissimilarity measures (Euclidean, Manhattan, Chebyshev, correlation) tested to find the best clustering solution.
 
-The goal of this project is to compare the effectiveness of the models listed above in terms of:
+### KMeans Clustering
 
-- **Accuracy**
-- **Computational Efficiency**
+The KMeans algorithm is used to determine the optimal number of clusters. Evaluation is performed using the Silhouette coefficient and inertia metrics, which help identify the best model based on clustering performance.
 
-The project also focuses on:
+## Evaluation
 
-- Tuning hyperparameters for optimal performance.
-- Optimizing feature selection to enhance predictive capabilities.
+- **Hierarchical Clustering Evaluation**: The performance of Hierarchical Clustering is evaluated using the silhouette coefficient for different linkage methods and dissimilarity measures.
+- **KMeans Clustering Evaluation**: KMeans clustering is evaluated using the Silhouette coefficient and inertia to determine the optimal number of clusters and the best scaling method.
 
-## Results and Insights
+## Conclusion
 
-The project aims to provide a detailed analysis of the models' performance, identifying the most effective approach for predicting the target variable
+The project concludes with a comparison of the best clustering models, highlighting the most influential variables for each cluster. The KMeans model with robust scaling achieved the highest silhouette coefficient, while Hierarchical Clustering also provided good results, making it a viable alternative.
