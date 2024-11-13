@@ -1,0 +1,7 @@
+numpy
+tensorflow==2.11.0
+pandas
+matplotlib
+scikit-learn
+google-colab
+keras==2.11.0
